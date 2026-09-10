@@ -1,3 +1,3 @@
 # prajwalprashanth.github.io
 
-go to prajwalprashanth.github.io to visit wtaeva site that is under construction/testing
+Prajwal Prashanth, one page: who he is and the work. Source lives in ~/portfolio.

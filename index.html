@@ -1,82 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<!-- metas -->
-	<meta charset="utf-8" />
-	<!--shall change the title according our domain and main keywords-->
-	<title>One Stop Blog-Earn by your content - read many topics</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="author" content="Prajwal Prashanth,Abhishek P Dharani" />
-	<!-- keywords: lets keep adding as our content grows
-		description: we'll have striking statement about our webpage-->
-	<meta name="keywords" content="blog,earn,content,tutorials,computer game,photography,coding,programming" />
-	<meta name="description" content="Stop surfing through web for all your queries and craving for reading/learning ,land in our page and worry no more,Also earn by writing mesmarizing content">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prajwal Prashanth</title>
+<meta name="description" content="Prajwal Prashanth is a software engineer in Bengaluru who builds AI systems that do real work in a business — reading, research, outreach and writing that a person checks.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prajwal Prashanth">
+<meta property="og:description" content="Software engineer. Builds AI systems that do real work in a business.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23d99512'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='27' font-weight='700' fill='%23fbf6ec' text-anchor='middle'%3EPP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf6ec;        /* soft paper */
+  --cream-deep:#f4ecdc;   /* tint for quiet blocks */
+  --ink:#332a21;          /* warm brown-black */
+  --ink-soft:#6b5d4d;
+  --marigold:#d99512;     /* the one accent */
+  --marigold-ink:#9a6505;
+  --hair:#e2d5be;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:'Nunito',system-ui,sans-serif;font-size:15px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1080px;margin:0 auto;padding:44px 30px 60px}
+a{color:var(--marigold-ink);text-decoration-thickness:1px;text-underline-offset:2px}
+a:focus-visible,img:focus-visible{outline:2.5px solid var(--marigold);outline-offset:3px;border-radius:3px}
 
-<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Include the jQuery Mobile library -->
-  	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	
-<!--personal customizations css,js-->
-	<link rel="stylesheet" href="p_style.css">
-	<script src="p_script.js"></script>
+/* ---------------- hello ---------------- */
+.hello{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:start}
+.shot{position:relative;width:104px;height:104px;flex:none}
+.shot .ring{position:absolute;inset:-7px;border:2px dashed var(--marigold);border-radius:50%;opacity:.75}
+.shot .face{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:var(--cream-deep);
+  border:2px solid var(--ink);display:grid;place-items:center}
+.shot .pp{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 60;
+  font-weight:600;font-size:38px;color:var(--marigold);letter-spacing:.02em;opacity:.85}
+.shot .face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 
+h1{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 96;
+  font-weight:600;font-size:clamp(2.3rem,4.4vw,3.1rem);line-height:1.04;letter-spacing:-.012em}
+.squiggle{display:block;width:min(290px,72%);height:13px;margin:5px 0 9px -2px;color:var(--marigold)}
+.said{font-size:1.2rem;max-width:46ch;line-height:1.34;font-weight:500}
+.chips{margin-top:8px;font-size:.88rem;color:var(--ink-soft);max-width:60ch}
+.chips b{font-weight:700;color:var(--ink)}
+.reach{display:flex;flex-direction:column;gap:4px;text-align:right;font-size:.87rem;padding-top:4px}
+.reach a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:1px}
+.reach a:hover{border-bottom-color:var(--marigold);color:var(--marigold-ink)}
+.reach .mail{font-weight:700}
+
+/* marker highlight — used twice on the whole page, never more */
+.mark{background:linear-gradient(104deg,transparent .4%,rgba(217,149,18,.34) 2%,rgba(217,149,18,.34) 97.5%,transparent 99%);
+  border-radius:.35em;padding:0 .16em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* ---------------- who he is ---------------- */
+.story{margin-top:24px;padding:16px 22px;background:var(--cream-deep);border-radius:14px 14px 14px 4px;
+  display:grid;grid-template-columns:104px 1fr;gap:20px;align-items:start}
+.story .who{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 24;
+  font-weight:600;font-size:1rem;color:var(--marigold-ink);line-height:1.25;padding-top:2px;white-space:nowrap}
+.story p{font-size:.98rem;line-height:1.5;max-width:84ch}
+
+/* ---------------- section label: ~ like this ~ ---------------- */
+.label{display:flex;align-items:center;gap:12px;margin:26px 0 13px}
+.label h2{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 30;
+  font-weight:600;font-size:1.16rem;white-space:nowrap;color:var(--ink)}
+.label .tl,.label .tr{color:var(--marigold);font-size:1.05rem;font-family:'Fraunces',Georgia,serif}
+.label .rule{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--marigold) 0 5px,transparent 5px 11px);opacity:.5}
+
+/* ---------------- two columns of work ---------------- */
+.cols{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:start}
+.area{margin-bottom:20px;break-inside:avoid}
+.area > h3{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 18;
+  font-weight:600;font-size:1rem;color:var(--marigold-ink);margin-bottom:7px;
+  padding-bottom:4px;border-bottom:1.5px solid var(--hair)}
+.area > h3 em{font-style:normal;color:var(--ink-soft);font-weight:400;font-size:.86em}
+.area p{font-size:.905rem;line-height:1.47;margin-bottom:7px}
+.area p:last-child{margin-bottom:0}
+.area a,.now a{text-decoration:underline;text-decoration-color:var(--marigold);text-decoration-thickness:1.5px}
+
+/* mini 4-step iteration strip inside InvestiVerse */
+.iter{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:11px 0 11px}
+.iter div{position:relative;padding:15px 9px 0 0}
+.iter div::after{content:'';position:absolute;left:0;right:0;top:6px;height:2px;
+  background:repeating-linear-gradient(90deg,var(--hair) 0 5px,transparent 5px 9px)}
+.iter div:last-child::after{right:55%}
+.iter div::before{content:'';position:absolute;left:0;top:1px;width:11px;height:11px;border-radius:50%;
+  background:var(--cream);border:2.5px solid var(--marigold);z-index:1}
+.iter div:last-child::before{background:var(--marigold);border-color:var(--marigold-ink)}
+.iter span{display:block;font-size:.775rem;line-height:1.25;color:var(--ink-soft)}
+.iter b{display:block;font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 14;
+  font-weight:600;font-size:.78rem;color:var(--marigold-ink)}
+
+/* ---------------- what he does now ---------------- */
+.now{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.now p{font-size:.93rem;line-height:1.5}
+
+/* ---------------- close ---------------- */
+.close{margin-top:26px;border-top:2.5px solid var(--ink);padding-top:15px;
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px}
+.close .ask{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 40;
+  font-weight:600;font-size:1.45rem;line-height:1.16;display:block}
+.close .sub{font-size:.9rem;color:var(--ink-soft);max-width:60ch;margin-top:5px}
+.close .reachline{font-size:.82rem;color:var(--ink-soft);text-align:right;line-height:1.5}
+.close .mailto{font-size:1rem;font-weight:700;color:var(--ink);text-decoration:none;
+  border-bottom:2px solid var(--marigold);padding-bottom:2px;white-space:nowrap}
+footer{margin-top:15px;font-size:.78rem;color:var(--ink-soft)}
+
+/* ---------------- screen: narrow ---------------- */
+@media screen and (max-width:880px){
+  .hello{grid-template-columns:auto 1fr;gap:20px}
+  .reach{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;text-align:left;gap:8px 16px;padding-top:0}
+  .cols{grid-template-columns:1fr;gap:6px}
+  .now{grid-template-columns:1fr;gap:10px}
+}
+@media screen and (max-width:560px){
+  .page{padding:28px 18px 44px}
+  .story{grid-template-columns:1fr;gap:7px}
+  .hello{grid-template-columns:1fr}
+  .shot{width:84px;height:84px}
+  .shot .pp{font-size:30px}
+  .squiggle{width:80%}
+  .reach{font-size:.82rem;word-break:break-word}
+  .iter{display:block}
+  .iter div{padding:0 0 10px 22px}
+  .iter div::after{left:5px;right:auto;top:13px;bottom:0;width:2px;height:auto;
+    background:repeating-linear-gradient(180deg,var(--hair) 0 5px,transparent 5px 9px)}
+  .iter div:last-child::after{display:none}
+  .iter div::before{left:0;top:2px}
+  .close{display:block}
+  .close .reachline{text-align:left;margin-top:12px}
+  .close .mailto{display:inline-block;margin-top:4px}
+}
+
+/* ---------------- one A4 page ---------------- */
+@media print{
+  @page{size:A4;margin:10mm}
+  body{background:#fff;font-size:9.6pt;line-height:1.35}
+  .page{padding:0;max-width:none}
+  .shot{width:70px;height:70px}
+  .shot .pp{font-size:25px}
+  .shot .ring{inset:-5px}
+  h1{font-size:22pt}
+  .squiggle{height:8px;margin:1px 0 3px -2px;width:205px}
+  .said{font-size:11pt;line-height:1.2}
+  .chips{font-size:9.2pt;margin-top:2px;line-height:1.3}
+  .reach{gap:1.5px;font-size:8.6pt}
+  .hello{gap:16px}
+  .story{margin-top:9px;padding:7px 13px;border-radius:9px 9px 9px 3px;background:var(--cream-deep);
+    grid-template-columns:96px 1fr;gap:12px}
+  .story .who{font-size:9.8pt;padding-top:1px}
+  .story p{font-size:9.6pt;line-height:1.34}
+  .label{margin:8px 0 4px;gap:8px}
+  .label h2{font-size:11.4pt}
+  .label .tl,.label .tr{font-size:10pt}
+  .cols{gap:22px}
+  .area{margin-bottom:8px}
+  .area > h3{font-size:9.9pt;margin-bottom:3px;padding-bottom:2px}
+  .area p{font-size:9.6pt;line-height:1.32;margin-bottom:4pt}
+  .iter{margin:5px 0 5px}
+  .iter div{padding:11px 7px 0 0}
+  .iter div::before{width:8px;height:8px;top:1px;border-width:2px}
+  .iter div::after{top:4px}
+  .iter b{font-size:8.4pt}
+  .iter span{font-size:8.4pt;line-height:1.18}
+  .now{gap:22px}
+  .now p{font-size:9.6pt;line-height:1.32}
+  .close{margin-top:9px;padding-top:6px;border-top-width:2px}
+  .close .ask{font-size:13pt}
+  .close .sub{font-size:9.2pt;margin-top:1px}
+  .close .mailto{font-size:9.8pt}
+  .close .reachline{font-size:8.4pt;line-height:1.4}
+  .area a,.now a{color:var(--ink);text-decoration-thickness:1px}
+  footer{margin-top:6px;font-size:8pt}
+  .story,.area,.close,.hello,.now p,.label{break-inside:avoid;page-break-inside:avoid}
+}
+
+</style>
 </head>
 <body>
-	<header>
-		<nav>
-			<a href="#"><h1>OneStopBlog.com</h1></a>
-			<span>
-			<a href="#" ontap="open_nav()" >&#9776;</a>
-				<div id="dropnav" >
-					<a href="#">blank</a>
-					<a href="#">blank</a>
-					<a href="#">blank</a>
-					<a href="#">About Us</a>
-					<a href="#" ontap="close_nav()">&times</a>
-				</div>			
-			<a href="#">Log In</a>
-			<a href="#">Sign Up</a>
-			</span>
-		</nav>
-		<div class="tagline">
-			<h1>The only blog you ever need<br /> to <br />Read,Write,Share and Earn</h1>
-		</div>		
-	</header>
-	<div>
-		<div>
-			<div>
-				
-			</div>
-			<div>
-				
-			</div>
-			<div>
-				
-			</div>
-		</div>
-		<div>
-			<div>
-				
-			</div>
-			<div>
-				
-			</div>
-			<div>
-				
-			</div>
-		</div>
-		<div>
-			<div>
-				
-			</div>
-			<div>
-				
-			</div>
-			<div>
-				
-			</div>
-		</div>
-	</div>
+<div class="page">
+
+  <!-- ======== hello ======== -->
+  <section class="hello">
+    <!-- To use a real headshot: drop a square photo.jpg next to this file. Nothing else to change. -->
+    <div class="shot">
+      <span class="ring" aria-hidden="true"></span>
+      <span class="face">
+        <span class="pp" aria-hidden="true">PP</span>
+        <img src="photo.jpg" alt="Prajwal Prashanth" onerror="this.remove()">
+      </span>
+    </div>
+
+    <div>
+      <h1>Prajwal Prashanth</h1>
+      <svg class="squiggle" viewBox="0 0 300 13" fill="none" aria-hidden="true" preserveAspectRatio="none">
+        <path d="M2 8.4C28 3.6 54 3.1 80 6.2c26 3.1 52 4.4 78 1.2 26-3.2 52-5.1 78-2.1 20 2.3 42 4.6 62 1.4"
+              stroke="currentColor" stroke-width="3.1" stroke-linecap="round"/>
+      </svg>
+      <p class="said">Software engineer. Builds AI systems that do real work in a business.</p>
+      <p class="chips"><b>software engineer</b> · <b>in AI since 2018</b> · <b>builds AI with BizSherpa.ai</b> · <b>Bengaluru</b></p>
+    </div>
+
+    <nav class="reach" aria-label="Contact">
+      <a class="mail" href="mailto:prajwal.prashanth22@gmail.com">prajwal.prashanth22@gmail.com</a>
+      <a href="https://linkedin.com/in/prajwalprashanth">linkedin.com/in/prajwalprashanth</a>
+      <a href="https://github.com/prajwalprashanth">github.com/prajwalprashanth</a>
+      <a href="https://x.com/praj_22">x.com/praj_22</a>
+    </nav>
+  </section>
+
+  <!-- ======== who he is ======== -->
+  <div class="story">
+    <span class="who">~ who he is ~</span>
+    <div>
+      <p>Prajwal is a software engineer who has worked in machine learning and AI since 2018. Since then: second employee at Jovian, a Y Combinator startup; founded InvestiVerse for retail investors; built the reading and writing systems for an investment team at Misfits Capital; and now sales, go-to-market and marketing AI with BizSherpa.ai. He has freelanced throughout his career — after Jovian, web and product work for clients, among them an esports platform, an events product and a creative studio. The AI work since, at Misfits Capital and now BizSherpa.ai, is freelance too, so he takes on outside projects.</p>
+    </div>
+  </div>
+
+  <!-- ======== the work ======== -->
+  <div class="label"><span class="tl">~</span><h2>the work</h2><span class="tr">~</span><span class="rule"></span></div>
+  <div class="cols">
+
+    <!-- ---- left column ---- -->
+    <div>
+      <div class="area">
+        <h3>InvestiVerse <em>2022–2025</em></h3>
+        <p>It started personal: a tracker for his own portfolio and trades, wired to a broker feed. That grew into trading and algo experiments — a rules-based trading bot among them — and then into a portfolio management platform he was building, through many rebuilds.</p>
+        <div class="iter">
+          <div><b>2022</b><span>tracker linked to a broker</span></div>
+          <div><b>2022–23</b><span>trading + algo experiments</span></div>
+          <div><b>2023</b><span>portfolio platform</span></div>
+          <div><b>2024</b><span>StockResearchGPT</span></div>
+        </div>
+        <p>At the GPT moment he rebuilt it as <b>StockResearchGPT</b>: a research assistant that reads a company's annual reports, concall transcripts and investor presentations, then answers an investor's plain question with citations — the debt plan, what management said about margins — so people <span class="mark">decide instead of reading</span> hundreds of pages. <a href="https://x.com/praj_22/status/1830201376246255658">Launched publicly in September 2024</a>. After it, a product that used prediction-market data as a live news signal: 100 signups, then paused.</p>
+      </div>
+
+      <div class="area">
+        <h3>Misfits Capital <em>2025</em></h3>
+        <p>He built the automations that do an investment team's reading and start its writing. A daily feed pulls in 20+ newsletters and sites and condenses each down to its actual argument, ranked for what each person cares about. A transcript pipeline turns voice notes and meeting recordings into text, and a writing system turns those into LinkedIn thought-leadership drafts in each person's own voice, learning from their edits. Quality checks run before anything is shown.</p>
+      </div>
+    </div>
+
+    <!-- ---- right column ---- -->
+    <div>
+      <div class="area">
+        <h3>BizSherpa.ai <em>2025–</em></h3>
+        <p>Sales, go-to-market and marketing work once done by hand is now done by AI systems he built. An existing network becomes a prioritised outreach plan with a reason for each contact. Prospect lists arrive already researched and ranked. A company's public data becomes a read on it before the first call. Marketing outreach and proposals are drafted by AI and checked before a person sends them. A coaching product was rebuilt with AI. For the person doing sales and marketing, the research, the list-building and the first draft are already done — the job is to judge and send.</p>
+      </div>
+
+      <div class="area">
+        <h3>Jovian <em>2019–2021</em></h3>
+        <p>Jovian made developer tools for deep learning, and Prajwal handled the library. As its second employee he became the top contributor to the open-source Jovian Python library — 400k+ downloads — leading the features that let people track, monitor and compare training experiments, plus the backend APIs behind them. He started the Jupyter Plugins project and led a team of five interns to extend that tracking into Jupyter Lab, and built the learning platform from the ground up (React and Next.js in front, Flask and Postgres behind). He taught on it too: teaching assistant and grader on the machine-learning courses, one now past 600k views, plus a two-month study group he ran himself.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ======== what he does now ======== -->
+  <div class="label"><span class="tl">~</span><h2>what he does now</h2><span class="tr">~</span><span class="rule"></span></div>
+  <div class="now">
+    <p>For a business, he puts AI on the slow, repetitive work: the reading, the research, the outreach, the writing, and the groundwork a decision rests on. The shape is the same every time — an AI system does the work, a person checks it before it counts, and you can watch it run.</p>
+    <p>He also teaches. Since 2025 he has run no-code buildathons and workshops with BLR AI Builders for people who don't write code; <a href="https://x.com/praj_22/status/1909516026108428792">one attendee travelled 220 km</a> and went home with a working website. He also mentors junior developers on live work.</p>
+  </div>
+
+  <!-- ======== close ======== -->
+  <div class="close">
+    <div>
+      <span class="ask">Tell him the <span class="mark">outcome you want</span>.</span>
+      <p class="sub">He will say honestly whether AI is the right tool, and what the smallest working version looks like.</p>
+    </div>
+    <p class="reachline">Reach Prajwal at<br><a class="mailto" href="mailto:prajwal.prashanth22@gmail.com">prajwal.prashanth22@gmail.com</a></p>
+  </div>
+
+  <footer>Prajwal Prashanth · Bengaluru, India</footer>
+</div>
 </body>
 </html>
